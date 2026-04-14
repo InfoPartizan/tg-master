@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TG Master — Профессиональный софт для Telegram маркетинга</title>
+    <meta name="description" content="Универсальная программа для рассылки, инвайта, парсинга и управления аккаунтами в Telegram. Поддержка ИИ-агентов, нейро-комментатора и мультиаккаунтов.">
+    <meta name="keywords" content="рассылка телеграм, инвайт телеграм, парсинг чатов, tg master, автоматизация telegram, ии боты телеграм">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Tailwind CSS for rapid styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <style>
+        :root {
+            --bg-dark: #0b0e14;
+            --bg-card: #161b22;
+            --accent: #24a1de; /* Telegram Blue */
+            --accent-gradient: linear-gradient(135deg, #24a1de 0%, #1c82b6 100%);
+            --text-main: #e6edf3;
+            --text-dim: #8b949e;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            scroll-behavior: smooth;
+        }
+
+        .gradient-text {
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .btn-primary {
+            background: var(--accent-gradient);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(36, 161, 222, 0.3);
+        }
+
+        .feature-card {
+            background: var(--bg-card);
+            border: 1px solid rgba(255,255,255,0.05);
+            transition: all 0.3s ease;
+        }
+
+        .feature-card:hover {
+            border-color: var(--accent);
+            transform: translateY(-5px);
+        }
+
+        .price-card.featured {
+            border: 2px solid var(--accent);
+            position: relative;
+        }
+
+        .price-card.featured::before {
+            content: 'ХИТ ПРОДАЖ';
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--accent);
+            padding: 2px 12px;
+            border-radius: 20px;
+            font-size: 10px;
+            font-weight: 800;
+        }
+
+        .nav-blur {
+            backdrop-filter: blur(10px);
+            background: rgba(11, 14, 20, 0.8);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <nav class="fixed w-full z-50 nav-blur border-b border-white/5">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <div class="w-10 h-10 bg-[#24a1de] rounded-lg flex items-center justify-center">
+                    <i class="fa-solid fa-paper-plane text-white text-xl"></i>
+                </div>
+                <span class="text-2xl font-extrabold tracking-tight">TG <span class="text-[#24a1de]">MASTER</span></span>
+            </div>
+            <div class="hidden md:flex space-x-8 font-medium text-sm uppercase tracking-wider">
+                <a href="#features" class="hover:text-[#24a1de] transition">Функции</a>
+                <a href="#ai" class="hover:text-[#24a1de] transition">ИИ Агенты</a>
+                <a href="#pricing" class="hover:text-[#24a1de] transition">Цены</a>
+                <a href="#faq" class="hover:text-[#24a1de] transition">FAQ</a>
+            </div>
+            <a href="https://tg-master.ru/download" class="btn-primary px-6 py-2 rounded-full font-bold text-sm">СКАЧАТЬ DEMO</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 px-6">
+        <div class="container mx-auto text-center">
+            <h1 class="text-4xl md:text-7xl font-extrabold mb-6 leading-tight">
+                Революция в <br><span class="gradient-text text-[#24a1de]">Телеграм-Маркетинге</span>
+            </h1>
+            <p class="text-lg md:text-xl text-[#8b949e] max-w-3xl mx-auto mb-10">
+                Универсальный софт для работы с множеством аккаунтов. Рассылка, парсинг, инвайтинг и уникальные ИИ-агенты, которые продают за вас 24/7.
+            </p>
+            <div class="flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-6">
+                <a href="https://tg-master.ru/download" class="btn-primary px-10 py-4 rounded-xl font-bold text-lg flex items-center justify-center">
+                    <i class="fa-solid fa-download mr-2"></i> Скачать бесплатно
+                </a>
+                <a href="#pricing" class="bg-white/10 hover:bg-white/20 px-10 py-4 rounded-xl font-bold text-lg transition flex items-center justify-center">
+                    Смотреть тарифы
+                </a>
+            </div>
+            <div class="mt-16 flex justify-center items-center space-x-8 text-[#8b949e] text-sm grayscale opacity-70">
+                <div class="flex items-center"><i class="fa-brands fa-windows mr-2 text-xl"></i> Windows</div>
+                <div class="flex items-center"><i class="fa-brands fa-apple mr-2 text-xl"></i> macOS</div>
+                <div class="flex items-center"><i class="fa-brands fa-linux mr-2 text-xl"></i> Linux</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Grid -->
+    <section id="features" class="py-20 bg-[#0d1117]">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-bold mb-4">Что умеет <span class="text-[#24a1de]">TG Master</span>?</h2>
+                <p class="text-[#8b949e]">Полный арсенал инструментов для профессионального продвижения</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="feature-card p-8 rounded-2xl">
+                    <i class="fa-solid fa-bullhorn text-4xl text-[#24a1de] mb-6"></i>
+                    <h3 class="text-xl font-bold mb-3">Умная рассылка</h3>
+                    <p class="text-[#8b949e] text-sm leading-relaxed">Массовая отправка сообщений (текст, фото, видео) с рандомизацией и задержками для защиты от спам-фильтров.</p>
+                </div>
+                <!-- Feature 2 -->
+                <div class="feature-card p-8 rounded-2xl">
+                    <i class="fa-solid fa-users-viewfinder text-4xl text-[#24a1de] mb-6"></i>
+                    <h3 class="text-xl font-bold mb-3">Точный Парсинг</h3>
+                    <p class="text-[#8b949e] text-sm leading-relaxed">Сбор аудитории из открытых и закрытых чатов/каналов. Фильтрация по активности и дате последнего входа.</p>
+                </div>
+                <!-- Feature 3 -->
+                <div class="feature-card p-8 rounded-2xl">
+                    <i class="fa-solid fa-user-plus text-4xl text-[#24a1de] mb-6"></i>
+                    <h3 class="text-xl font-bold mb-3">Авто-Инвайтинг</h3>
+                    <p class="text-[#8b949e] text-sm leading-relaxed">Автоматическое добавление целевой аудитории в ваши группы. Самый быстрый способ вырастить сообщество.</p>
+                </div>
+                <!-- Feature 4 -->
+                <div class="feature-card p-8 rounded-2xl">
+                    <i class="fa-solid fa-address-card text-4xl text-[#24a1de] mb-6"></i>
+                    <h3 class="text-xl font-bold mb-3">Менеджер Аккаунтов</h3>
+                    <p class="text-[#8b949e] text-sm leading-relaxed">Массовое изменение имен, аватарок, BIO. Поддержка форматов Session+Json и работа через прокси.</p>
+                </div>
+                <!-- Feature 5 -->
+                <div class="feature-card p-8 rounded-2xl">
+                    <i class="fa-solid fa-robot text-4xl text-[#24a1de] mb-6"></i>
+                    <h3 class="text-xl font-bold mb-3">Чат-Боты 24/7</h3>
+                    <p class="text-[#8b949e] text-sm leading-relaxed">Автоответчики по ключевым словам. Программа сама ведет диалог, пока вы отдыхаете.</p>
+                </div>
+                <!-- Feature 6 -->
+                <div class="feature-card p-8 rounded-2xl">
+                    <i class="fa-solid fa-shield-halved text-4xl text-[#24a1de] mb-6"></i>
+                    <h3 class="text-xl font-bold mb-3">Телеграм Чекер</h3>
+                    <p class="text-[#8b949e] text-sm leading-relaxed">Проверка баз номеров и логинов на наличие регистрации в мессенджере с высокой скоростью.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Section -->
+    <section id="ai" class="py-20 bg-gradient-to-b from-[#0b0e14] to-[#161b22]">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2">
+                    <div class="inline-block px-4 py-1 rounded-full bg-[#24a1de]/20 text-[#24a1de] text-xs font-bold mb-6">AI POWERED</div>
+                    <h2 class="text-4xl md:text-5xl font-extrabold mb-8">Искусственный Интеллект на службе вашего бизнеса</h2>
+                    <ul class="space-y-6">
+                        <li class="flex items-start">
+                            <div class="w-8 h-8 rounded-full bg-[#24a1de] flex-shrink-0 flex items-center justify-center mr-4 mt-1">
+                                <i class="fa-solid fa-comment-dots text-xs"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg">Нейро-Комментатор</h4>
+                                <p class="text-[#8b949e] text-sm">ИИ пишет осмысленные комментарии к новым постам в каналах, привлекая внимание к вашему профилю.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="w-8 h-8 rounded-full bg-[#24a1de] flex-shrink-0 flex items-center justify-center mr-4 mt-1">
+                                <i class="fa-solid fa-brain text-xs"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg">Обучаемые ИИ Агенты</h4>
+                                <p class="text-[#8b949e] text-sm">Загрузите свою базу знаний, и бот будет консультировать клиентов так же профессионально, как живой менеджер.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="w-8 h-8 rounded-full bg-[#24a1de] flex-shrink-0 flex items-center justify-center mr-4 mt-1">
+                                <i class="fa-solid fa-magnifying-glass-chart text-xs"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg">ИИ Поиск Чатов</h4>
+                                <p class="text-[#8b949e] text-sm">Нейросеть сама находит целевые группы по вашему запросу и парсит участников в один клик.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="md:w-1/2 relative">
+                    <div class="absolute -inset-4 bg-[#24a1de]/20 blur-3xl rounded-full"></div>
+                    <img src="https://tg-master.ru/img/features-ai.png" alt="AI Features" class="relative rounded-2xl shadow-2xl border border-white/10" onerror="this.src='https://via.placeholder.com/600x400/161b22/24a1de?text=AI+Dashboard'">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section id="pricing" class="py-20 bg-[#0b0e14]">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-bold mb-4">Прозрачные Тарифы</h2>
+                <p class="text-[#8b949e]">Выберите план, который подходит вашему масштабу</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Plan 1 -->
+                <div class="price-card bg-[#161b22] p-10 rounded-3xl border border-white/5 flex flex-col">
+                    <h3 class="text-2xl font-bold mb-2">USER</h3>
+                    <p class="text-[#8b949e] text-sm mb-6">Для простых задач</p>
+                    <div class="text-4xl font-extrabold mb-8">4,900₽ <span class="text-sm font-normal text-[#8b949e]">/ 6 мес.</span></div>
+                    <ul class="space-y-4 mb-10 flex-grow text-sm">
+                        <li><i class="fa-solid fa-check text-[#24a1de] mr-2"></i> До 10 TG аккаунтов</li>
+                        <li><i class="fa-solid fa-check text-[#24a1de] mr-2"></i> До 500К сообщений/мес</li>
+                        <li><i class="fa-solid fa-check text-[#24a1de] mr-2"></i> 2 установки на ПК</li>
+                        <li><i class="fa-solid fa-check text-[#24a1de] mr-2"></i> Парсинг и Рассылка</li>
+                        <li class="opacity-40"><i class="fa-solid fa-xmark mr-2"></i> ИИ Агенты (ограничено)</li>
+                    </ul>
+                    <a href="https://tg-master.ru/#pricing" class="w-full py-4 rounded-xl border border-[#24a1de] text-[#24a1de] font-bold text-center hover:bg-[#24a1de] hover:text-white transition">Выбрать</a>
+                </div>
+
+                <!-- Plan 2 -->
+                <div class="price-card featured bg-[#161b22] p-10 rounded-3xl flex flex-col">
+                    <h3 class="text-2xl font-bold mb-2">PRO</h3>
+                    <p class="text-[#8b949e] text-sm mb-6">Для уверенного роста</p>
+                    <div class="text-4xl font-extrabold mb-8">9,900₽ <span class="text-sm font-normal text-[#8b949e]">/ 6 мес.</span></div>
+                    <ul class="space-y-4 mb-10 flex-grow text-sm">
+                        <li><i class="fa-solid fa-check text-[#24a1de] mr-2"></i> До 50 TG аккаунтов</li>
+                        <li><i class="fa-solid fa-check text-[#24a1de] mr-2"></i> До 2.5 млн сообщений/мес</li>
+                        <li><i class="fa-solid fa-check text-[#24a1de] mr-2"></i> 5 установок на ПК</li>
+                        <li><i class="fa-solid fa-check text-[#24a1de] mr-2"></i> Полный функционал</li>
+                        <li><i class="fa-solid fa-check text-[#24a1de] mr-2"></i> Обучаемый ИИ бот</li>
+                    </ul>
+                    <a href="https://tg-master.ru/#pricing" class="w-full py-4 rounded-xl btn-primary font-bold text-center">Купить сейчас</a>
+                </div>
+
+                <!-- Plan 3 -->
+                <div class="price-card bg-[#161b22] p-10 rounded-3xl border border-white/5 flex flex-col">
+                    <h3 class="text-2xl font-bold mb-2">VIP</h3>
+                    <p class="text-[#8b949e] text-sm mb-6">Для профессионалов</p>
+                    <div class="text-4xl font-extrabold mb-8">14,900₽ <span class="text-sm font-normal text-[#8b949e]">/ 6 мес.</span></div>
+                    <ul class="space-y-4 mb-10 flex-grow text-sm">
+                        <li><i class="fa-solid fa-check text-[#24a1de] mr-2"></i> До 100 TG аккаунтов</li>
+                        <li><i class="fa-solid fa-check text-[#24a1de] mr-2"></i> До 10 млн сообщений/мес</li>
+                        <li><i class="fa-solid fa-check text-[#24a1de] mr-2"></i> 10 установок на ПК</li>
+                        <li><i class="fa-solid fa-check text-[#24a1de] mr-2"></i> Приоритетная поддержка</li>
+                        <li><i class="fa-solid fa-check text-[#24a1de] mr-2"></i> Макс. лимиты ИИ</li>
+                    </ul>
+                    <a href="https://tg-master.ru/#pricing" class="w-full py-4 rounded-xl border border-white/20 font-bold text-center hover:bg-white/10 transition">Выбрать</a>
+                </div>
+            </div>
+            
+            <!-- Lifetime Offer -->
+            <div class="mt-12 bg-gradient-to-r from-[#24a1de]/20 to-transparent p-8 rounded-3xl border border-[#24a1de]/30 flex flex-col md:flex-row items-center justify-between">
+                <div>
+                    <h4 class="text-2xl font-bold mb-2">Пожизненный VIP Безлимит</h4>
+                    <p class="text-[#8b949e]">Платите один раз — пользуетесь всю жизнь без подписок.</p>
+                </div>
+                <div class="mt-6 md:mt-0 text-center md:text-right">
+                    <div class="text-sm line-through text-red-500 mb-1">100,000 ₽</div>
+                    <div class="text-3xl font-black mb-4">30,000 ₽</div>
+                    <a href="https://tg-master.ru/#pricing" class="btn-primary px-8 py-3 rounded-xl font-bold inline-block">ЗАБРАТЬ НАВСЕГДА</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="py-20 bg-[#0d1117]">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <h2 class="text-3xl md:text-5xl font-bold mb-12 text-center">Частые вопросы</h2>
+            <div class="space-y-4">
+                <details class="group bg-[#161b22] rounded-xl p-6 border border-white/5">
+                    <summary class="list-none flex justify-between items-center cursor-pointer font-bold">
+                        На каких ОС работает программа?
+                        <i class="fa-solid fa-chevron-down group-open:rotate-180 transition"></i>
+                    </summary>
+                    <p class="mt-4 text-[#8b949e] text-sm leading-relaxed">
+                        Мы поддерживаем Windows 10/11, macOS (Intel и Apple Silicon M1/M2/M3) и Linux (Ubuntu, Debian через AppImage).
+                    </p>
+                </details>
+                <details class="group bg-[#161b22] rounded-xl p-6 border border-white/5">
+                    <summary class="list-none flex justify-between items-center cursor-pointer font-bold">
+                        Нужны ли прокси для работы?
+                        <i class="fa-solid fa-chevron-down group-open:rotate-180 transition"></i>
+                    </summary>
+                    <p class="mt-4 text-[#8b949e] text-sm leading-relaxed">
+                        Да, для массовой работы мы настоятельно рекомендуем использовать качественные HTTP прокси. Это защитит ваши аккаунты от блокировок.
+                    </p>
+                </details>
+                <details class="group bg-[#161b22] rounded-xl p-6 border border-white/5">
+                    <summary class="list-none flex justify-between items-center cursor-pointer font-bold">
+                        Есть ли бесплатная версия?
+                        <i class="fa-solid fa-chevron-down group-open:rotate-180 transition"></i>
+                    </summary>
+                    <p class="mt-4 text-[#8b949e] text-sm leading-relaxed">
+                        Да, вы можете скачать DEMO версию бесплатно. Она позволяет проверить весь основной функционал программы перед покупкой.
+                    </p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 bg-[#0b0e14] border-t border-white/5">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-8 md:mb-0">
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="w-8 h-8 bg-[#24a1de] rounded flex items-center justify-center">
+                            <i class="fa-solid fa-paper-plane text-white text-sm"></i>
+                        </div>
+                        <span class="text-xl font-extrabold tracking-tight">TG MASTER</span>
+                    </div>
+                    <p class="text-[#8b949e] text-xs max-w-xs">
+                        Профессиональная автоматизация маркетинга в Telegram. Все права защищены © 2024.
+                    </p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="https://t.me/tg_master_news" class="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center hover:bg-[#24a1de] transition">
+                        <i class="fa-brands fa-telegram text-xl"></i>
+                    </a>
+                    <a href="https://youtube.com/@tg-master" class="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center hover:bg-red-600 transition">
+                        <i class="fa-brands fa-youtube text-xl"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
